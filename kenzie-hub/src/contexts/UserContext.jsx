@@ -9,6 +9,7 @@ export const UserProvider = ({ children }) => {
   const [globalLoading, setGlobalLoading] = useState(false);
 
   const [user, setUser] = useState(null);
+  
   const [userTechs, setUserTechs] = useState(null)
 
   const navigate = useNavigate();

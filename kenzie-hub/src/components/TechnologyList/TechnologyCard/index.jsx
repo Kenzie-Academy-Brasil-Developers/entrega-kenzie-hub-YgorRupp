@@ -6,6 +6,7 @@ import { UserContext } from "../../../contexts/UserContext";
 const TechnologyCard = () => {
 
   const {user, userTechs} = useContext(UserContext)
+  
   return (
     <div>
       {userTechs && userTechs.map((tech, index) => (
