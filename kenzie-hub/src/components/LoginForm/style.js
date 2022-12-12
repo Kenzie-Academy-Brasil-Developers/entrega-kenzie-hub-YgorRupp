@@ -12,6 +12,10 @@ export const StyledDivLogin = styled.div`
     width: 100%;
     height: 100vh;
 
+    p{
+        margin-left: 1.125rem;
+        color: var(--color-primary);
+    }
 
     img {
         margin-bottom: 20px;
@@ -26,7 +30,7 @@ export const StyledDivLogin = styled.div`
         width: 95%;
 
     }
-    p {
+    h2 {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -62,6 +66,7 @@ export const StyledDivLogin = styled.div`
         outline: 1px solid var(--color-grey-0);
 
         background-color: var(--color-grey-2);
+        color: var(--color-grey-0);
 
     }
     input::placeholder{

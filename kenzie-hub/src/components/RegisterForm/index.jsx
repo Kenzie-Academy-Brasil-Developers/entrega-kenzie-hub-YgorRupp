@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { StyledDivRegister } from "../RegisterForm/style";
 import Logo from "../../assets/Logo.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { RegisterSchema } from "./registerSchema";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../contexts/UserContext";
 
-const RegisterForm = ({ userRegister }) => {
+const RegisterForm = () => {
   const [loading, setLoading] = useState(false);
+
+  const { userRegister } = useContext(UserContext);
 
   const submit = (data) => {
     userRegister(data, setLoading);

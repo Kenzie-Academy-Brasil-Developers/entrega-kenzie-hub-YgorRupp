@@ -5,11 +5,11 @@ import TechnologyList from "../../components/TechnologyList";
 import UserInfo from "../../components/UserInfo";
 import { StyledDivDash } from "./style";
 
-const DashboardPage = ({ user }) => {
+const DashboardPage = () => {
   return (
     <StyledDivDash>
       <Header />
-      <UserInfo user={user} />
+      <UserInfo />
       <CreateTechnology />
       <TechnologyList />
     </StyledDivDash>

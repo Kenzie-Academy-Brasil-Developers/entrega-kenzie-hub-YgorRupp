@@ -1,15 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
 import Logo from "../../assets/Logo.svg";
+import { UserContext } from "../../contexts/UserContext";
 import { StyledHeader } from "./style";
 
 const Header = () => {
+  const { userLogout } = useContext(UserContext);
   return (
     <StyledHeader>
       <img src={Logo} alt="" />
-      <button>
-        <Link to="/">Sair</Link>
-      </button>
+      <button onClick={() => userLogout()}>Sair</button>
     </StyledHeader>
   );
 };

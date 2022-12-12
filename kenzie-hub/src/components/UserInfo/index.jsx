@@ -1,11 +1,13 @@
 import React from "react";
 import { StyledUserInfo } from "./style";
 
-const UserInfo = ({ user }) => {
+const UserInfo = () => {
+  const data = JSON.parse(localStorage.getItem("@UserID"));
+
   return (
     <StyledUserInfo>
-      <h2>Olá, {user.name}</h2>
-      <p>{user.course_module}</p>
+      <h2>{data.name}</h2>
+      <p>{data.course_module}</p>
     </StyledUserInfo>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "./loginSchema";
@@ -8,9 +8,12 @@ import { Link } from "react-router-dom";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { UserContext } from "../../contexts/UserContext";
 
-const LoginForm = ({ userLogin }) => {
+const LoginForm = () => {
   const [loading, setLoading] = useState(false);
+
+  const { userLogin } = useContext(UserContext);
 
   const {
     register,
@@ -19,7 +22,6 @@ const LoginForm = ({ userLogin }) => {
   } = useForm({
     resolver: yupResolver(loginSchema),
   });
-  console.log(errors);
 
   const submit = (data) => {
     userLogin(data, setLoading);
@@ -30,7 +32,7 @@ const LoginForm = ({ userLogin }) => {
       <StyledDivLogin>
         <img src={Logo} alt="" />
         <form onSubmit={handleSubmit(submit)}>
-          <p>Login</p>
+          <h2>Login</h2>
           <label htmlFor="Email">Email</label>
           <input
             id="email"

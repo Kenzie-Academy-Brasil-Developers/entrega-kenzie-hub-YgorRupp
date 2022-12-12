@@ -11,6 +11,11 @@ export const StyledDivRegister = styled.div`
 
     background-color: var(--color-grey-4);
 
+    p{
+        margin-left: 1.125rem;
+        color: var(--color-primary);
+    }
+
     div{
         display: flex;
         justify-content: space-between;
@@ -80,6 +85,7 @@ export const StyledDivRegister = styled.div`
         height: 38px;
 
         background-color: var(--color-grey-2);
+        color: var(--color-grey-0);
 
         border: 1px solid var(--color-grey-2);
         border-radius: 4px;
