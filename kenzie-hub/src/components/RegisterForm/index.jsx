@@ -1,10 +1,9 @@
 import React, { useContext, useState } from "react";
-import { StyledDivRegister } from "../RegisterForm/style";
+import { StyledDivRegister, StyledLink } from "../RegisterForm/style";
 import Logo from "../../assets/Logo.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { RegisterSchema } from "./registerSchema";
-import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
 
 const RegisterForm = () => {
@@ -29,9 +28,7 @@ const RegisterForm = () => {
     <StyledDivRegister>
       <div>
         <img src={Logo} alt="" />
-        <button>
-          <Link to="/">Voltar</Link>
-        </button>
+          <StyledLink to="/">Voltar</StyledLink>
       </div>
       <form onSubmit={handleSubmit(submit)} noValidate>
         <div>

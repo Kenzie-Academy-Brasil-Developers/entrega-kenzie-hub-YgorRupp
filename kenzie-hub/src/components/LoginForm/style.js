@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export const StyledDivLogin = styled.div`
@@ -143,4 +144,30 @@ export const StyledDivLogin = styled.div`
             width: 20%;
         }
     }
+`
+export const StyledLinkLogin= styled(Link)`
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 38px;
+        width: 92%;
+
+        background-color: var(--color-grey-1);
+        color: var(--color-grey-0);
+
+        border: 1px solid var(--color-grey-1);
+        border-radius: 4px;
+
+        margin-left: 1.125rem;
+        margin-bottom: 2.063rem;
+
+        font-weight: 500;
+        font-size: 1rem;
+
+        font-family: 'Inter', sans-serif;
+
+        text-decoration: none;
+    
 `

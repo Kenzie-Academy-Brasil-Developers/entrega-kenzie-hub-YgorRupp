@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledDivRegister = styled.div`
@@ -133,6 +134,7 @@ export const StyledDivRegister = styled.div`
         font-weight: 500;
         font-size: 0.75rem;
     }
+
     @media (min-width: 1024px){
         div{
             width: 35%;
@@ -165,4 +167,26 @@ export const StyledDivRegister = styled.div`
             width: 20%;
         }
     }
+
+`
+export const StyledLink = styled(Link)`
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    width: 68px;
+
+    background-color: var(--color-grey-3);
+    color: var(--color-grey-0);
+
+    text-decoration: none;
+
+    font-family: inter;
+
+    font-weight: 600;
+    font-size: 12px;
+
+    border-radius: 4px;
 `

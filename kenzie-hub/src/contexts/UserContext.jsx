@@ -9,6 +9,7 @@ export const UserProvider = ({ children }) => {
   const [globalLoading, setGlobalLoading] = useState(false);
 
   const [user, setUser] = useState(null);
+  const [userTechs, setUserTechs] = useState(null)
 
   const navigate = useNavigate();
 
@@ -23,7 +24,8 @@ export const UserProvider = ({ children }) => {
               Authorization: `Bearer ${token}`,
             },
           });
-          setUser(response.data.user);
+          setUser(response.data)
+          setUserTechs(response.data.techs);
           navigate("/dashboard");
         } catch (error) {
         } finally {
@@ -42,6 +44,8 @@ export const UserProvider = ({ children }) => {
       localStorage.setItem("@UserID", JSON.stringify(response.data.user));
       navigate("/dashboard");
       setUser(response.data.user);
+      setUserTechs(response.data.user.techs)
+
     } catch (error) {
       toast.error("Email ou senha invalidos");
     } finally {
@@ -71,7 +75,7 @@ export const UserProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ user, userLogin, userRegister, userLogout, globalLoading }}
+      value={{ user, userLogin, userRegister, userLogout, globalLoading, userTechs }}
     >
       {children}
     </UserContext.Provider>

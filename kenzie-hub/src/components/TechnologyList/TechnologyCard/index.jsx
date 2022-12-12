@@ -1,23 +1,22 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { StyledCard } from "./style";
 import Trash from "../../../assets/Vector.svg";
+import { UserContext } from "../../../contexts/UserContext";
 
 const TechnologyCard = () => {
-  const data = JSON.parse(localStorage.getItem("@UserID"));
-  console.log(data);
+
+  const {user, userTechs} = useContext(UserContext)
   return (
     <div>
-      <StyledCard>
-        <h2>ygor</h2>
-        <span>teste</span>
-      </StyledCard>
-      <StyledCard>
-        <h2>teste</h2>
-        <div>
-          <span>Intermediário</span>
-          <img src={Trash} alt="" />
-        </div>
-      </StyledCard>
+      {userTechs && userTechs.map((tech, index) => (
+        <StyledCard key={index}>
+          <h2>{tech.title}</h2>
+          <div>
+            <span>{tech.status}</span>
+            <img src={Trash} alt="" />
+          </div>
+        </StyledCard>
+      ))}
     </div>
   );
 };

@@ -44,7 +44,7 @@ export const GlobalStyles = createGlobalStyle`
 	    border-collapse: collapse;
 	    border-spacing: 0;
     }
-    h1, h2, h3, h4, h5, h6, p, span, li, button, input, select, option{
+    h1, h2, h3, h4, h5, h6, p, span, li, button, input, select, option, link{
         font-family: 'Inter', sans-serif;
     }
     :root{

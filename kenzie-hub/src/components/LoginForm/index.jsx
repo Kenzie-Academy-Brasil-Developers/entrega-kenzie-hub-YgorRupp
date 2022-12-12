@@ -2,9 +2,8 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "./loginSchema";
-import { StyledDivLogin } from "./style";
+import { StyledDivLogin, StyledLinkLogin } from "./style";
 import Logo from "../../assets/Logo.svg";
-import { Link } from "react-router-dom";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -55,9 +54,7 @@ const LoginForm = () => {
             Entrar
           </button>
           <span>Ainda não possui uma conta?</span>
-          <button>
-            <Link to="/register">Cadastro</Link>
-          </button>
+            <StyledLinkLogin to="/register">Cadastre-se</StyledLinkLogin>
         </form>
       </StyledDivLogin>
       <ToastContainer
