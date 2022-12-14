@@ -13,6 +13,17 @@ export const StyledList = styled.ul`
 
     background-color: var(--color-grey-3);
 
+    max-height: 600px;
+    overflow-x: auto;
+
+    ::-webkit-scrollbar {
+    width: 0;
+    }
+
+    .containerCards{
+        max-height: 500px;
+    }
+
     @media(min-width: 1024px){
         margin-left: 100px;
         width: 80%;
