@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import { StyledCard } from "./style";
 import Trash from "../../../assets/Vector.svg";
 import { UserContext } from "../../../contexts/UserContext";

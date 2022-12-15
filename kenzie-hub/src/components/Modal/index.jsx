@@ -1,4 +1,4 @@
-import { type } from "@testing-library/user-event/dist/type";
+
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { TechContext } from "../../contexts/TechContext";

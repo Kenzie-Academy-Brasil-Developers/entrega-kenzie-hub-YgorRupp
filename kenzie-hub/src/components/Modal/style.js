@@ -68,6 +68,7 @@ export const StyledDivModal = styled.div`
         height: 38px;
 
         background-color: var(--color-grey-2);
+        color: var(--color-grey-0);
 
         border: 1px solid var(--color-grey-0);
         border-radius: 4px;
